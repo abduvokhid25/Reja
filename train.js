@@ -1,4 +1,16 @@
-console.log("Jack Ma maslahatlari");
+//Task-1
+
+    let count = 0;
+    const letter = "e";
+    const word = "engineer";
+
+for( const ele of word) {
+    if (ele === letter){
+        count++
+    } 
+}
+console.log(count);
+/*console.log("Jack Ma maslahatlari");
 const list = [
     "Yaxshi talaba boling", //0-20
     "To'g'ri boshliq tanlang va koproq xato qiling", //20-30
@@ -29,7 +41,7 @@ maslahatBering(70, (err, data) => {
         console.log(data);
     }
 });
-console.log("passed here 1");
+console.log("passed here 1");*/
 
 /*//asyncronus function
 async function maslahatBering(a) {
