@@ -1,4 +1,17 @@
-//Task-1
+// task-2
+
+const choosingNumber = (word) => {
+   let count = 0;
+   for( const ele of word) {
+    if(ele >=0 && ele<= 9) {
+        count++
+    }
+    
+   }
+   console.log(count);
+}
+choosingNumber("d2a54y79wet0sfgb9");
+/*//Task-1
 
     let count = 0;
     const letter = "e";
@@ -9,7 +22,7 @@ for( const ele of word) {
         count++
     } 
 }
-console.log(count);
+console.log(count); */
 /*console.log("Jack Ma maslahatlari");
 const list = [
     "Yaxshi talaba boling", //0-20
