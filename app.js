@@ -16,14 +16,35 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routing code
-app.post("/create-item", (req, res) => {
+app.post("/create-items", (req, res) => {
+  console.log("user entered /create-item");
+ console.log(req.body);
+ const newReja = req.body.reja
+ db.collection("plans").insertOne({reja: newReja}, (err, data) => {
+  if(err) {
+    console.log("something went wrong");
+  } else { 
+    res.end("successfully added");
+  }
+ });
+});
 
-})
 app.get("/", function (req, res) {
-  res.render("reja");
+  console.log("user entered /");
+  db.collection("plans").find().toArray((err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+    } else {
+    console.log(data);
+    res.render("reja", {items: data });
+  
+     }
+   }); 
 });
 app.get("/author", function (req, res) {
   res.render("author", { user: user });
+  
 });
 
 module.exports = app; 
