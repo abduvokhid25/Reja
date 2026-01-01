@@ -1,4 +1,7 @@
-// task-2
+
+
+
+/*// task-2
 
 const choosingNumber = (word) => {
    let count = 0;
@@ -8,9 +11,9 @@ const choosingNumber = (word) => {
     }
     
    }
-   console.log(count);
+   console.log(count); 
 }
-choosingNumber("d2a54y79wet0sfgb9");
+choosingNumber("d2a54y79wet0sfgb9");*/
 /*//Task-1
 
     let count = 0;

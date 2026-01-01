@@ -16,16 +16,13 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routing code
-app.post("/create-items", (req, res) => {
+app.post("/create-item", (req, res) => {
   console.log("user entered /create-item");
  console.log(req.body);
- const newReja = req.body.reja
- db.collection("plans").insertOne({reja: newReja}, (err, data) => {
-  if(err) {
-    console.log("something went wrong");
-  } else { 
-    res.end("successfully added");
-  }
+ const new_reja = req.body.reja
+ db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+  console.log(data.ops);
+  res.json(data.ops[0]);
  });
 });
 
