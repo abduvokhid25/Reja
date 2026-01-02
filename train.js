@@ -1,4 +1,29 @@
+class Shop {
+    constructor (cola, non, lagmon) {
+        this.cola = cola;
+        this.non = non;
+        this.lagmon = lagmon;
+    }
 
+    qoldiq(vaqt) { 
+        console.log(`Hozir ${vaqt}da  dokonimizda ${this.cola} ta cola, ${this.non} ta non va
+             ${this.lagmon} ta lagmon bor`);
+    }
+   
+    sotish(sotilganNon) { 
+        this.non  -= sotilganNon
+    }
+    qabul(qabulCola) {
+       this.cola += qabulCola
+    }
+}
+
+ const myShop = new Shop(2, 4, 5);
+         myShop.qoldiq("20:40");
+
+     myShop.sotish(3);  
+     myShop.qabul(4);
+     myShop.qoldiq("20:50");
 
 
 /*// task-2
