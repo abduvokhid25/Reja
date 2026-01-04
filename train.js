@@ -1,4 +1,29 @@
-class Shop {
+
+
+function checkParamentr(mitgroup, gmtiprou) {
+
+    for (let i = 0; i < mitgroup.length; i++) {
+        let letter = mitgroup[i];
+        let find = false;
+
+        for (let j = 0; j < gmtiprou.length; j++) {
+            if (letter === gmtiprou[j]) {
+                find = true;
+                break;
+            }
+        }
+
+        if (find === false) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(checkParamentr("mitgroup", "gmtiprou"));
+
+/*class Shop {
     constructor (cola, non, lagmon) {
         this.cola = cola;
         this.non = non;
@@ -23,7 +48,7 @@ class Shop {
 
      myShop.sotish(3);  
      myShop.qabul(4);
-     myShop.qoldiq("20:50");
+     myShop.qoldiq("20:50"); */
 
 
 /*// task-2

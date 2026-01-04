@@ -19,21 +19,41 @@ app.set("view engine", "ejs");
 // 4 Routing code
 app.post("/create-item", (req, res) => {
   console.log("user entered /create-item");
- console.log(req.body);
+ //console.log(req.body);
  const new_reja = req.body.reja
  db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-  console.log(data.ops);
+  //console.log(data.ops);
   res.json(data.ops[0]);
  });
 });
 
 app.post("/delete-item", (req, res) => {
-  const id = req.body.id;
-  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)},
-  function(err, data) {
-    res.json({state: "success"});
-     }
-   ); 
+    const id = req.body.id;
+    db.collection("plans").deleteOne(
+        { _id: new mongodb.ObjectId(id) },
+        function (err, data) {
+            res.json({ state: "success" });
+        }
+    );
+});
+
+app.post("/edit-item", (req, res) => {
+    const data = req.body;
+    console.log(data);
+    db.collection("plans").findOneAndUpdate(
+        { _id: new mongodb.ObjectId(data.id) },
+        { $set: { reja: data.new_input } },
+        function (err, data) {
+            res.json({ state: "success" });
+        }
+    );
+});
+app.post("/delete-all", (req, res) => {
+    if (req.body.delete_all) {
+        db.collection("plans").deleteMany(function () {
+            res.json({ state: "hamma rejalar ochirildi" });
+        });
+    }
 });
 
 app.get("/", function (req, res) {
