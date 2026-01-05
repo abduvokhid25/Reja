@@ -1,4 +1,4 @@
-
+Task D
 
 function checkParamentr(mitgroup, gmtiprou) {
 
