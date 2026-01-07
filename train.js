@@ -1,4 +1,12 @@
-Task D
+
+//task E
+
+function getReverse (hello) {
+    return hello.split('').reverse().join('');
+    
+}
+console.log(getReverse("hello"));
+/*Task D
 
 function checkParamentr(mitgroup, gmtiprou) {
 
@@ -21,7 +29,7 @@ function checkParamentr(mitgroup, gmtiprou) {
     return true;
 }
 
-console.log(checkParamentr("mitgroup", "gmtiprou"));
+console.log(checkParamentr("mitgroup", "gmtiprou")); */
 
 /*class Shop {
     constructor (cola, non, lagmon) {
