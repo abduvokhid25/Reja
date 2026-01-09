@@ -1,11 +1,28 @@
+//taskF
+// 
+//1-usul
+ /*function findDoublers(hello) {
+    return hello.split('').includes("l");
+}
+console.log(findDoublers("hello"));*/
 
-//task E
+//2-usul
+
+function FindDoublers(hello) {
+    const toArray = hello.split('');
+ const result = toArray.some((ele) => {
+  return ele === "l" });
+  return result;
+}
+console.log(FindDoublers("hello"));
+
+/*/task E
 
 function getReverse (hello) {
     return hello.split('').reverse().join('');
     
 }
-console.log(getReverse("hello"));
+console.log(getReverse("hello"));*/
 /*Task D
 
 function checkParamentr(mitgroup, gmtiprou) {
